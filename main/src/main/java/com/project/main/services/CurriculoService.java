@@ -1,3 +1,5 @@
+package com.project.main.services;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,12 +11,9 @@ import java.util.Optional;
 
 @Service
 public class CurriculoService {
-    private final CurriculoRepository curriculoRepository;
 
     @Autowired
-    public CurriculoService(CurriculoRepository curriculoRepository) {
-        this.curriculoRepository = curriculoRepository;
-    }
+    private  CurriculoRepository curriculoRepository;
 
     public List<CurriculoModel> obterTodosOsCurriculos() {
         return curriculoRepository.findAll();

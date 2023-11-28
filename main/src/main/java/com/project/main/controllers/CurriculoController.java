@@ -1,21 +1,22 @@
+package com.project.main.controllers;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import com.project.main.services.
+
+import com.project.main.models.CurriculoModel;
+import com.project.main.services.CurriculoService;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/curriculos")
+@CrossOrigin
 public class CurriculoController {
 
-    private final CurriculoService;
 
     @Autowired
-    public CurriculoController(CurriculoService curriculoService) {
-        this.curriculoService = curriculoService;
-    }
+    private CurriculoService curriculoService;
 
     @GetMapping
     public String listarCurriculos(Model model) {
