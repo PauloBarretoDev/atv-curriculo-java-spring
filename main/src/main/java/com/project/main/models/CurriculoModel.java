@@ -1,14 +1,8 @@
 package com.project.main.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import jakarta.persistence.*;
-import lombok.Data;
 
-@Data
 @Entity
-@Getter @Setter @NoArgsConstructor
 public class CurriculoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,12 +13,52 @@ public class CurriculoModel {
     private String experiencia;
     private String email;
 
-    public CurriculoModel(String nome, int idade, String competencias, String experiencia, String email){
-        this.nome = nome;
-        this.idade = idade;
+    public String getCompetencias() {
+        return competencias;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+
+    public String getExperiencia() {
+        return experiencia;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setCompetencias(String competencias) {
         this.competencias = competencias;
-        this.experiencia = experiencia;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setExperiencia(String experiencia) {
+        this.experiencia = experiencia;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
 }

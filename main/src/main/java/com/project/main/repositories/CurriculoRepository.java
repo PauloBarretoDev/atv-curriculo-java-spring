@@ -8,5 +8,4 @@ import com.project.main.models.CurriculoModel;
 
 public interface CurriculoRepository extends JpaRepository<CurriculoModel, Long> {
     
-    List<CurriculoModel> findByEmail(String email);
 }

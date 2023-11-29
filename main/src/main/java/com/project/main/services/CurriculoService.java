@@ -23,10 +23,6 @@ public class CurriculoService {
         return curriculoRepository.findById(id);
     }
 
-    public List<CurriculoModel> obterCurriculosPorEmail(String email) {
-        return curriculoRepository.findByEmail(email);
-    }
-
     public void salvarCurriculo(CurriculoModel curriculo) {
         curriculoRepository.save(curriculo);
     }
